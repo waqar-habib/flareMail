@@ -29,20 +29,23 @@
 
 - Languages: HTML5/CSS3, JavaScript
 - Libraries: jQuery, Bootstrap, Google Fonts
-- Others: 
+- APIs: Gmail, LinkedIn, GIPHY
 
 ## APIs
 
 - GMAIL API: https://developers.google.com/gmail/api/
-- API 2: TBD
+- LinkedIn: https://docs.microsoft.com/en-us/linkedin/consumer/index
+- Backup: GIPHY API: https://developers.giphy.com/
 
 ## MVP
 
-- Custom signature templates
+- Custom signature templates using Gmail
+- Add signature to LinkedIn Profile
+- Tentative: add a GIPHY to your signature
 
 ## Stretch Goals
 
-- What you will try to accomplish after MVP
+- Goal 1: Add another API that pulls the users address into their signature
 
 ## Future Development
 
