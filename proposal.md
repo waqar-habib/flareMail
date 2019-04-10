@@ -38,7 +38,7 @@
 
 ## MVP
 
-- List the Must Have Features
+- Custom signature templates
 
 ## Stretch Goals
 
