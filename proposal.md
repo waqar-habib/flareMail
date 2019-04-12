@@ -1,4 +1,4 @@
-# Project: SignatureGen (Tentative)
+# Project: FlareMail (Tentative)
 
 > Live Site link: Coming Soon - 4/20/2019
 
@@ -29,7 +29,7 @@
 
 - Languages: HTML5/CSS3, JavaScript
 - Libraries: jQuery, Bootstrap, Google Fonts
-- APIs: Gmail, LinkedIn, GIPHY
+- APIs: Gmail, GIPHY
 
 ## APIs
 
@@ -40,8 +40,7 @@
 ## MVP
 
 - Custom signature templates using Gmail
-- Add signature to LinkedIn Profile
-- Tentative: add a GIPHY to your signature
+- add a GIPHY to your signature
 
 ## Stretch Goals
 
@@ -54,4 +53,4 @@
 
 ## Credits/Resources
 
-- TBD
+- Credits Coming Soon
