@@ -45,6 +45,7 @@
 ## Stretch Goals
 
 - Goal 1: Add another API that pulls the users address into their signature
+- Goal 2: TBD
 
 ## Future Development
 
