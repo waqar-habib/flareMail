@@ -1,4 +1,4 @@
-# Project: SignatureGen (Tentative)
+# Project: FlareMail (Tentative)
 
 > Live Site link: Coming Soon - 4/20/2019
 
@@ -29,26 +29,28 @@
 
 - Languages: HTML5/CSS3, JavaScript
 - Libraries: jQuery, Bootstrap, Google Fonts
-- Others: 
+- APIs: Gmail, GIPHY
 
 ## APIs
 
 - GMAIL API: https://developers.google.com/gmail/api/
-- API 2: TBD
+- LinkedIn: https://docs.microsoft.com/en-us/linkedin/consumer/index
+- Backup: GIPHY API: https://developers.giphy.com/
 
 ## MVP
 
-- List the Must Have Features
+- Custom signature templates using Gmail
+- add a GIPHY to your signature
 
 ## Stretch Goals
 
-- What you will try to accomplish after MVP
+- Goal 1: Add another API that pulls the users address into their signature
+- Goal 2: TBD
 
 ## Future Development
 
-- Whats been tabled
-- Update this after the project has been completed
+- TBD
 
 ## Credits/Resources
 
-- Any credits you should list to resources you used
+- Credits Coming Soon
