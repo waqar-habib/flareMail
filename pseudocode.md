@@ -26,7 +26,7 @@
     - *Retrieve* data from Firebase?
     - *Using jQuery* 
         - Concatenate a line that "merges" the <vars> with the appropriate <html> tags.
-        - Example: "<h1>" + <userFirstName> + "</h1>"
+        - Example: <h1> + <userFirstName> + </h1>
         - Using *.append/.prepend/.text* the generated info to the <textarea> field on generatedCode.html file. 
         - Hint: In order to test, try using a command that simply spits out the user input in the <textarea> field. If that works, then generating the rest shouldn't be a problem. 
 
