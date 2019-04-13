@@ -1,0 +1,17 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+}
+
+.nav-link, .navbar-brand {
+    letter-spacing: 1.5px !important;
+    color: #ffffff !important;
+}
+
+.navbar-brand, .display-4 {
+    font-family: 'Fruktur', cursive;
+}
+
+.navbar {
+    background-color: #01267B !important;
+}
