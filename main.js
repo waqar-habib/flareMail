@@ -68,5 +68,5 @@ $("#generateCodeBtn").on('click', function () {
 });
 
 database.ref().on("child_added", function(snapshot){
-    
+    var snapshot = 
 })
