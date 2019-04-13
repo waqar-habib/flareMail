@@ -93,6 +93,12 @@ $("#generateCodeBtn").on("click", function() {
   });
 });
 
-database.ref().on("child_added", function(snapshot) {
-  var sv = snapshot.val();
-});
+database.ref().on(
+  "child_added",
+  function(snapshot) {
+    var sv = snapshot.val();
+  },
+  function(errorObject) {
+    console.log("Errors handled: " + errorObject.code);
+  }
+);
