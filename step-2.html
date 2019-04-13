@@ -5,10 +5,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+<<<<<<< HEAD
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
+    <!--Firebase Script-->
+    <script src="https://www.gstatic.com/firebasejs/5.9.4/firebase.js"></script>    
+    
+    <!--Google Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Fruktur|Open+Sans" rel="stylesheet">    
+    <!--Overall website stylesheet-->
+    <link rel="stylesheet" href="./style.css">    
+    
+=======
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <script src="https://www.gstatic.com/firebasejs/5.9.4/firebase.js"></script>
 
+>>>>>>> f09ea99f08d961266a61d6f9ad7225333af2b81e
     <title>Step 2 - FlareMail</title>
 </head>
 
@@ -113,11 +126,11 @@
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label for="officePhone">Office Phone</label>
-                            <input type="officePhone" class="form-control" id="userofficePhone" placeholder="210-552-5533">
+                            <input type="officePhone" class="form-control" id="userOfficePhone" placeholder="210-552-5533">
                         </div>
                         <div class="form-group col-md-6">
                             <label for="officeFax">Office Fax</label>
-                            <input type="officeFax" class="form-control" id="userofficeFax" placeholder="210-552-5534">
+                            <input type="officeFax" class="form-control" id="userOfficeFax" placeholder="210-552-5534">
                         </div>
                     </div>
                     <!--Office Phone and Office Fax Ends-->
@@ -154,7 +167,7 @@
     <div class="container">
         <div class="row mt-3">
             <div class="col-3">
-                <a href="./generatedCode.html" class="btn btn-success">Generate Signature Code!</a>
+                <button class="btn btn-success" id="generateCodeBtn">Generate Signature Code!</button>
             </div>
         </div>
     </div>
