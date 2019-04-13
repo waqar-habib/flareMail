@@ -10,8 +10,7 @@ firebase.initializeApp(config);
 
 var database = firebase.database();
 
-var firstName = "";
-var lastName = "";
+var fullName = "";
 var cellNumber = "";
 var email = "";
 var jobTitle = "";
@@ -30,10 +29,8 @@ var zip = "";
 $("#generateCodeBtn").on("click", function() {
   //This button should navigate user to generatedCode.html
   event.preventDefault();
-  firstName = $("#userFirstName")
-    .val()
-    .trim();
-  lastName = $("userLastName")
+  // Grab values from text boxes
+  fullName = $("#userName")
     .val()
     .trim();
   cellNumber = $("#userCellPhone")
