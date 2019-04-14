@@ -29,23 +29,21 @@
 
 - Languages: HTML5/CSS3, JavaScript
 - Libraries: jQuery, Bootstrap, Google Fonts
-- APIs: Gmail, GIPHY
+- APIs: GIPHY, ZipCode lookup
 
 ## APIs
 
-- GMAIL API: https://developers.google.com/gmail/api/
-- LinkedIn: https://docs.microsoft.com/en-us/linkedin/consumer/index
-- Backup: GIPHY API: https://developers.giphy.com/
+- GIPHY API: https://developers.giphy.com/
+- ZipCode Lookup:
 
 ## MVP
 
-- Custom signature templates using Gmail
-- add a GIPHY to your signature
+- Generate basic html code that can be copied and pasted into email server
 
 ## Stretch Goals
 
-- Goal 1: Add another API that pulls the users address into their signature
-- Goal 2: TBD
+- Goal 1: Add instructions on how user can insert their html code into email server like gmail
+- Goal 2: Add another API that pulls the users address into their signature
 
 ## Future Development
 
