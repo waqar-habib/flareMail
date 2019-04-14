@@ -25,11 +25,9 @@ var city = "";
 var state = "";
 var zip = "";
 
-// On click function for generatedCode.html
-$("#generateCodeBtn").on("click", function() {
-  //This button should navigate user to generatedCode.html
+// On click function to grab values from text boxes
+$("#generateCodeBtn").on("click", function(event) {
   event.preventDefault();
-  // Grab values from text boxes
   fullName = $("#userName")
     .val()
     .trim();
@@ -90,6 +88,23 @@ $("#generateCodeBtn").on("click", function() {
     zip: zip,
     dateAdded: firebase.database.ServerValue.TIMESTAMP
   });
+  //empty the text boxes
+  $("#userName").val("");
+  $("#userCellPhone").val("");
+  $("#userEmailAddress").val("");
+  $("#userJobTitle").val("");
+  $("#userDepartment").val("");
+  $("#userCompanyName").val("");
+  $("#userWebsiteURL").val("");
+  $("#userOfficePhone").val("");
+  $("#userOfficeFax").val("");
+  $("#inputAddress").val("");
+  $("#inputAddress2").val("");
+  $("#inputCity").val("");
+  $("#inputState").val("");
+  $("#inputZip").val("");
+
+  return false;
 });
 
 database.ref().on(
