@@ -74,8 +74,7 @@ $("#generateCodeBtn").on("click", function() {
     .trim();
 
   database.ref().push({
-    firstName: firstName,
-    lastName: lastName,
+    fullName: fullName,
     cellNumber: cellNumber,
     email: email,
     jobTitle: jobTitle,
