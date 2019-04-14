@@ -5,23 +5,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
     <!--Firebase Script-->
-    <script src="https://www.gstatic.com/firebasejs/5.9.4/firebase.js"></script>    
-    
+    <script src="https://www.gstatic.com/firebasejs/5.9.4/firebase.js"></script>
+
     <!--Google Fonts-->
-    <link href="https://fonts.googleapis.com/css?family=Fruktur|Open+Sans" rel="stylesheet">    
+    <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Fruktur|Open+Sans" rel="stylesheet">
     <!--Overall website stylesheet-->
-    <link rel="stylesheet" href="./style.css">    
-    
+    <link rel="stylesheet" href="./style.css">
+
     <title>Step 2 - FlareMail</title>
 </head>
 
 <body>
     <!--NavBar Begins-->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <img src="./images/placeholder-logo.png" width="50" height="50" class="d-inline-block align-top" alt="">
+        <img src="./images/logo.png" width="40" height="40" class="d-inline-block align-top" alt="">
         &nbsp;&nbsp;&nbsp;
         <a class="navbar-brand" href="./index.html">FlareMail</a>
 
@@ -31,8 +32,8 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" href="./index.html">Home</a>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="./instructions.html">Instructions</a>
@@ -41,8 +42,8 @@
                     <a class="nav-link" href="./team.html">Meet The Team</a>
                 </li>
                 <!--Extra Link syntax if needed
-                <li class="nav-item">
-                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>-->
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>-->
                 </li>
             </ul>
         </div>
@@ -57,15 +58,19 @@
     </div>
 
     <!--Main Body-->
-    <div class="container border border-black">
+    <div class="container">
         <div class="row">
             <div class="col-md-8">
                 <form>
                     <!--First and Last Name-->
                     <div class="form-row">
                         <div class="form-group col-md-6">
-                            <label for="fullName">Full Name</label>
-                            <input type="fullName" class="form-control" id="userName" placeholder="John Doe">
+                            <label for="firstName">First Name</label>
+                            <input type="firstName" class="form-control" id="userFirstName" placeholder="John">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="lastName">Last Name</label>
+                            <input type="lastName" class="form-control" id="userLastName" placeholder="Doe">
                         </div>
                     </div>
                     <!--First and Last Name Ends-->
@@ -115,7 +120,8 @@
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label for="officePhone">Office Phone</label>
-                            <input type="officePhone" class="form-control" id="userOfficePhone" placeholder="210-552-5533">
+                            <input type="officePhone" class="form-control" id="userOfficePhone"
+                                placeholder="210-552-5533">
                         </div>
                         <div class="form-group col-md-6">
                             <label for="officeFax">Office Fax</label>
@@ -163,12 +169,7 @@
 
     <!--Main Body Ends-->
 
-    <!--Footer-->
-    <footer class="page-footer bg-secondary font-small blue mt-4 pt-4">
-        <div class="footer-copyright bg-bottom-footer text-center py-3">
-            © 2019 Copyright: The FlareMail Team
-        </div>
-    </footer>
+
 
 
 
