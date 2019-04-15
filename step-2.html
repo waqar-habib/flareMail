@@ -20,6 +20,10 @@
 </head>
 
 <body>
+
+    <!--Firebase Script-->
+    <script src="https://www.gstatic.com/firebasejs/5.9.4/firebase.js"></script>
+    
     <!--NavBar Begins-->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <img src="./images/logo.png" width="40" height="40" class="d-inline-block align-top" alt="">
@@ -64,14 +68,11 @@
                 <form>
                     <!--First and Last Name-->
                     <div class="form-row">
-                        <div class="form-group col-md-6">
-                            <label for="firstName">First Name</label>
-                            <input type="firstName" class="form-control" id="userFirstName" placeholder="John">
+                        <div class="form-group col-md-12">
+                            <label for="fullName">First Name</label>
+                            <input type="fullName" class="form-control" id="fullName" placeholder="John Doe">
                         </div>
-                        <div class="form-group col-md-6">
-                            <label for="lastName">Last Name</label>
-                            <input type="lastName" class="form-control" id="userLastName" placeholder="Doe">
-                        </div>
+
                     </div>
                     <!--First and Last Name Ends-->
 
@@ -79,11 +80,11 @@
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label for="cellPhone">Cell Number</label>
-                            <input type="cellPhone" class="form-control" id="usercellPhone" placeholder="210-555-5533">
+                            <input type="cellPhone" class="form-control" id="cellPhone" placeholder="210-555-5533">
                         </div>
                         <div class="form-group col-md-6">
                             <label for="emailAddress">Email Address</label>
-                            <input type="emailAddress" class="form-control" id="useremailAddress"
+                            <input type="emailAddress" class="form-control" id="emailAddress"
                                 placeholder="john.doe@email.com">
                         </div>
                     </div>
@@ -93,12 +94,12 @@
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label for="jobTitle">Job Title</label>
-                            <input type="jobTitle" class="form-control" id="userjobTitle"
+                            <input type="jobTitle" class="form-control" id="jobTitle"
                                 placeholder="Chief Executive Officer">
                         </div>
                         <div class="form-group col-md-6">
                             <label for="department">Department</label>
-                            <input type="department" class="form-control" id="userDepartment"
+                            <input type="department" class="form-control" id="department"
                                 placeholder="If Applicable">
                         </div>
                     </div>
@@ -107,12 +108,12 @@
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label for="companyName">Company Name</label>
-                            <input type="companyName" class="form-control" id="usercompanyName"
+                            <input type="companyName" class="form-control" id="companyName"
                                 placeholder="Pied Piper">
                         </div>
                         <div class="form-group col-md-6">
                             <label for="websiteURL">Website</label>
-                            <input type="websiteURL" class="form-control" id="userwebsiteURL" placeholder="johndoe.com">
+                            <input type="websiteURL" class="form-control" id="websiteURL" placeholder="johndoe.com">
                         </div>
                     </div>
                     <!--Company Name and Website Ends-->
@@ -120,36 +121,36 @@
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label for="officePhone">Office Phone</label>
-                            <input type="officePhone" class="form-control" id="userOfficePhone"
+                            <input type="officePhone" class="form-control" id="officePhone"
                                 placeholder="210-552-5533">
                         </div>
                         <div class="form-group col-md-6">
                             <label for="officeFax">Office Fax</label>
-                            <input type="officeFax" class="form-control" id="userOfficeFax" placeholder="210-552-5534">
+                            <input type="officeFax" class="form-control" id="officeFax" placeholder="210-552-5534">
                         </div>
                     </div>
                     <!--Office Phone and Office Fax Ends-->
 
                     <div class="form-group">
                         <label for="inputAddress">Address</label>
-                        <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                        <input type="text" class="form-control" id="address" placeholder="1234 Main St">
                     </div>
                     <div class="form-group">
                         <label for="inputAddress2">Address 2</label>
-                        <input type="text" class="form-control" id="inputAddress2" placeholder="Suite 123">
+                        <input type="text" class="form-control" id="address2" placeholder="Suite 123">
                     </div>
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label for="inputCity">City</label>
-                            <input type="text" class="form-control" id="inputCity" placeholder="Gotham City">
+                            <input type="text" class="form-control" id="city" placeholder="Gotham City">
                         </div>
                         <div class="form-group col-md-4">
                             <label for="inputState">State</label>
-                            <input type="text" class="form-control" id="inputState">
+                            <input type="text" class="form-control" id="state">
                         </div>
                         <div class="form-group col-md-2">
                             <label for="inputZip">Zip</label>
-                            <input type="text" class="form-control" id="inputZip">
+                            <input type="text" class="form-control" id="zip">
                         </div>
                     </div>
 
@@ -160,19 +161,14 @@
 
     </div>
     <div class="container">
-        <div class="row mt-3">
+        <div class="row mt-3 mb-3">
             <div class="col-3">
                 <button class="btn btn-success" id="generateCodeBtn">Generate Signature Code!</button>
             </div>
         </div>
     </div>
 
-    <!--Main Body Ends-->
-
-
-
-
-
+   <!--Main Body Ends-->
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
@@ -183,7 +179,10 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
     </script>
-    <script src="main2.js"></script>
+    <!--Experimental JS-->
+    <script src="./app.js"></script>
+
+    
 </body>
 
 </html>
