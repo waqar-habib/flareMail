@@ -1,12 +1,11 @@
 var config = {
-  apiKey: "AIzaSyDVIAQhYygPg8BTU_S9L_8lREoDe5eIpkA",
-  authDomain: "flaremail-5c49d.firebaseapp.com",
-  databaseURL: "https://flaremail-5c49d.firebaseio.com",
-  projectId: "flaremail-5c49d",
-  storageBucket: "flaremail-5c49d.appspot.com",
-  messagingSenderId: "139402945796"
+  apiKey: "AIzaSyBtDOAmnjJ0ZnBAAVHSRNyFAjTdxd2LzyU",
+  authDomain: "fir-test-819e4.firebaseapp.com",
+  databaseURL: "https://fir-test-819e4.firebaseio.com",
+  projectId: "fir-test-819e4",
+  storageBucket: "fir-test-819e4.appspot.com",
+  messagingSenderId: "797703264978"
 };
-firebase.initializeApp(config);
 
 var database = firebase.database();
 
