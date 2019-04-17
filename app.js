@@ -86,7 +86,6 @@ $("#generateCodeBtn").on("click", function() {
     email: email,
     addressOne: addressOne,
     addressTwo: addressTwo,
-    department: department,
     city: city,
     state: state,
     zip: zip
@@ -143,18 +142,19 @@ database.ref().on("child_added", function(childSnapshot) {
   // Print data into div
 
   // From <body> to <tbody> where the full name code starts
-  $("#generatedCode").text(
-    '<div class="presentational-container" style="padding: 20px; background-color: #fff" ;> <table role="presentation" style="background: none; margin: 0; padding: 10px 10px 0; border-width: 3px 0 0 0; border-style: solid; border-color: rgb(78, 78, 78);"> <tbody> <!-- Image --> <tr class="outer-row" style="padding: 0 12px 0 0;"> <td class="image-cell" style="padding: 0 12px 0 0; text-decoration: none;"> <img src="../images/waqar.png" name="preview-image-url" alt="Signature Image" style="vertical-align: middle;width:120px; border-radius: 100%;"/> </td> <td class="description-cell" style="padding: 0 0 0 12px;"> <table role="presentation" style="background: none; border: 0px; margin: 0; padding: 0;"> <tbody>' +
+  $("#generatedCode").empty();
+  $("#generatedCode").append(
+    '<div class="presentational-container" style="padding: 20px; background-color: #fff" ;> <table role="presentation" style="background: none; margin: 0; padding: 10px 10px 0; border-width: 3px 0 0 0; border-style: solid; border-color: rgb(78, 78, 78);"> <tbody> <!-- Image --> <tr class="outer-row" style="padding: 0 12px 0 0;"> <td class="image-cell" style="padding: 0 12px 0 0; text-decoration: none;"> <img src="./images/waqar.png" name="preview-image-url" alt="Signature Image" style="vertical-align: middle;width:120px; border-radius: 100%;"/> </td> <td class="description-cell" style="padding: 0 0 0 12px;"> <table role="presentation" style="background: none; border: 0px; margin: 0; padding: 0;"> <tbody>' +
       // Concatenate full name <tr> tag
-      '<tr> <td colspan="2" class="full-name" style="font-weight: bold; color: rgb(0, 0, 0); font-size: 24px; font-family: Arial, Helvetica, sans-serif;">' +
+      '<tr> <td colspan="2" class="full-name" style="font-weight: bold; color: rgb(0, 0, 0); font-size: 24px; font-family: Arial, Helvetica, sans-serif;">' + 
       fullName +
       "</td> </tr>" +
       // Concatenate office phone <tr> tag
-      '<tr><td colspan="2" class="phone" style="padding-bottom: 10px; vertical-align: top; color: #333333; font-size: 14px; font-family: Arial, Helvetica, sans-serif;">' +
+      '<tr><td colspan="2" class="phone" style="padding-bottom: 10px; vertical-align: top; color: #333333; font-size: 14px; font-family: Arial, Helvetica, sans-serif;">' + 'Phone: ' +
       officePhone +
       "</td> </tr>" +
       // Concatenate cell phone <tr> tag
-      '<tr><td colspan="2" class="phone" style="padding-bottom: 10px; vertical-align: top; color: #333333; font-size: 14px; font-family: Arial, Helvetica, sans-serif;">' +
+      '<tr><td colspan="2" class="phone" style="padding-bottom: 10px; vertical-align: top; color: #333333; font-size: 14px; font-family: Arial, Helvetica, sans-serif;">' +  'Cell: ' +
       cellPhone +
       "</td> </tr>" +
       // Concatenate job title <tr> tag
@@ -166,13 +166,13 @@ database.ref().on("child_added", function(childSnapshot) {
       company +
       "</td></tr>" +
       // Concatenate website <tr> tag
-      '<tr> <td valign="top" class="website" style="padding-bottom: 10px; vertical-align: top; color: #333333; font-size: 14px; font-family: Arial, Helvetica, sans-serif;"> <a href="" style="color: rgb(5, 113, 255); text-decoration: none; font-weight: normal; font-size: 14px;">' +
+      '<tr> <td valign="top" class="website" style="padding-bottom: 10px; vertical-align: top; color: #333333; font-size: 14px; font-family: Arial, Helvetica, sans-serif;"> <a href="" style="color: rgb(5, 113, 255); text-decoration: none; font-weight: normal; font-size: 14px;">' + 'Website: ' +
       website +
       "</a> </td> </tr>" +
       // Concatenate email <tr> tag
-      '<tr> <td colspan="2" class="email" style="padding-bottom: 10px; vertical-align: top; color: #333333; font-size: 14px; font-family: Arial, Helvetica, sans-serif;"> <a href="">' +
-      email +
-      "</a> </td> </tr>" +
+      '<tr> <td colspan="2" class="email" style="padding-bottom: 10px; vertical-align: top; color: #333333; font-size: 14px; font-family: Arial, Helvetica, sans-serif;"> <a href="">' + 'Email: ' + email + "</a> </td> </tr>" +
+      
+      /* Uncomment out the code from ln 177-196, once the template has been modified to include the address, State, city and zip fields.
       // Concatenate address one <tr> tag
       "" +
       addressOne +
@@ -193,6 +193,10 @@ database.ref().on("child_added", function(childSnapshot) {
       "" +
       zip +
       "</td></tr>" +
+      */
+
+      // 4.17.16 - Modify the code below once the form fields for social media are added so app.js concatenates the user input with the code below. Also, update the social media icons links.
+
       // Print rest of html code that doesn't have user input
       '<!-- Social Media --> <tr> <td colspan="2" class="social-icons" style="padding-top: 5px;"> <ul style="list-style: none; padding: 0; margin: 0; height: 25px;"> <li style="display: inline-block;"> <a href="" style="text-decoration: none;"><img src="https://image.flaticon.com/icons/svg/174/174848.svg" alt="Let\'s be friends on Facebook." style="width: 25px; height: 25px;" /> </a> </li> <li style="display: inline-block;"> <a href="" style="text-decoration: none;"> <img src="https://image.flaticon.com/icons/svg/174/174876.svg" alt="Follow me on Twitter!" style="width: 25px; height: 25px;" /> </a> </li> <li style="display: inline-block;"> <a href="" style="text-decoration: none;"> <img src="https://image.flaticon.com/icons/svg/174/174855.svg" alt="Follow me on Instagram!" style="width: 25px; height: 25px;" /> </a> </li> <li style="display: inline-block;"> <a href="" style="text-decoration: none;"> <img src="https://image.flaticon.com/icons/svg/174/174857.svg" alt="Connected with me on LinkedIn!" style="width: 25px; height: 25px;" /> </a> </li> </ul> </td> </tr> </tbody> </table> </td> </tr> </tbody> </table> </div></body>'
   );
