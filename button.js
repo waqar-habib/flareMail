@@ -1,5 +1,5 @@
 function myFunction() {
   var copyText = document.getElementById(generatedCode);
-  copyText.querySelector();
+  copyText.select();
   document.execCommand("copy");
 }
