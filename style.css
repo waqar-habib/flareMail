@@ -1,35 +1,73 @@
 body {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 15px;
-    background-image: url(./images/bg-main.png);
-    background-size: cover;
-	background-repeat: repeat;
-    background-attachment: scroll;
+  font-family: "Open Sans", sans-serif;
+  font-size: 15px;
+  background-image: url(./images/bg-main.png);
+  background-size: cover;
+  background-repeat: repeat;
+  background-attachment: scroll;
 }
 
-.nav-link, .navbar-brand {
-    letter-spacing: 1.5px !important;
-    color: #ffffff !important;
+.nav-link,
+.navbar-brand {
+  letter-spacing: 1.5px !important;
+  color: #ffffff !important;
 }
 
 .navbar-brand {
-    font-family: 'Fruktur', cursive;
-    color: rgb(255, 89, 0);
+  font-family: "Fruktur", cursive;
+  color: rgb(255, 89, 0);
 }
 
 .display-4 {
-    font-family: 'Fjalla One', sans-serif;
-    font-size: 6rem;
-    color: #ffffff;
+  font-family: "Fjalla One", sans-serif;
+  font-size: 6rem;
+  color: #ffffff;
 }
 
 .navbar {
-    background-color: rgb(0, 0, 0) !important;
+  background-color: rgb(0, 0, 0) !important;
 }
 
 .jumbotron {
-    background-image: url(./images/jumbotron-background.png);
-    background-size: cover;
-	background-repeat: no-repeat;
+  background-image: url(./images/jumbotron-background.png);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 140px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: 150%;
+  left: 50%;
+  margin-left: -75px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
