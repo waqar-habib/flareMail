@@ -1,5 +1,7 @@
-function myFunction() {
-  var copyText = document.getElementById(generatedCode);
-  copyText.select();
-  document.execCommand("copy");
-}
+const generateCode = document.getElementById("generateCode");
+const btnCopy = document.getElementById("btnCopy");
+
+btnCopy.onclick = function() {
+  generateCode.select();
+  document.execCommand("Copy");
+};
