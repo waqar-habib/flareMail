@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!--Firebase Script-->
+    <script src="https://www.gstatic.com/firebasejs/5.9.4/firebase.js"></script>
+
+    <!--Google Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Fruktur|Open+Sans" rel="stylesheet">
+
+    <!--Overall website stylesheet-->
+    <link rel="stylesheet" href="./style.css">
+
+    <script src="https://code.jquery.com/jquery-3.4.0.js"
+        integrity="sha256-DYZMCC8HTC+QDr5QNaIcfR7VSPtcISykd+6eSmBW5qo=" crossorigin="anonymous"></script>
+
+    <!--Experimental JS-->
+    <script src="./app03.js"></script>
+</head>
+
+<body>
+
+
+    <!--NavBar Begins-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <img src="./images/logo.png" width="40" height="40" class="d-inline-block align-top" alt="">
+        &nbsp;&nbsp;&nbsp;
+        <a class="navbar-brand" href="./index.html">FlareMail</a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="./index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./instructions.html">Instructions</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./team.html">Meet The Team</a>
+                </li>
+                <!--Extra Link syntax if needed
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>-->
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!--NavBar Ends-->
+
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-4">Voila!</h1>
+            <h2>Meet Your New Signature!</h2>
+            <p class="lead">Just copy the following code into your preferred email server and you'll be good to go!</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="card mb-4">
+            <div class="card-body" id="generatedCode">
+                    
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+            <div class="row mt-3">
+                <div class="col-4">
+                    <button class="btn btn-success" id="newSignatureBtn">Create Another One!</button>
+                </div>
+                <button class="btn btn-success" onclick="myFunction()">Copy text</button>
+            </div>
+        </div>   
+        
+        
+
+
+
+<!--Script Tags-->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+</script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+</script>
+    
+
+   
+<!--JS file that empties Firebase Database before creating new code-->
+<script src="./removedata.js"></script>
+<script src="./button.js"></script>
+
+</body>
+
+</html>
