@@ -15,8 +15,7 @@ firebase.initializeApp(config);
 var database = firebase.database();
 
 var fullName = "";
-var officePhone = "";
-var cellPhone = "";
+var phone = "";
 var jobTitle = "";
 var company = "";
 var website = "";
@@ -32,16 +31,13 @@ $("#generateCodeBtn").on("click", function() {
   event.preventDefault();
 
   // Navigate to generatedCode.html
-  location.href = "./generatedCode.html";
+  location.href = "./generatedCode01.html";
 
   // Grab values from text boxes
   fullName = $("#fullName")
     .val()
     .trim();
-  officePhone = $("#officePhone")
-    .val()
-    .trim();
-  cellPhone = $("#cellPhone")
+  officePhone = $("#phone")
     .val()
     .trim();
   jobTitle = $("#jobTitle")
@@ -78,8 +74,7 @@ $("#generateCodeBtn").on("click", function() {
   // Create an object to store all user input
   var userInfo = {
     fullName: fullName,
-    officePhone: officePhone,
-    cellPhone: cellPhone,
+    phone: phone,
     jobTitle: jobTitle,
     company: company,
     website: website,
@@ -101,8 +96,7 @@ $("#generateCodeBtn").on("click", function() {
 
   // Clear Previous Input
   $("#fullName").val("");
-  $("#officePhone").val("");
-  $("#cellPhone").val("");
+  $("#phone").val("");
   $("#jobTitle").val("");
   $("#companyName").val("");
   $("#websiteURL").val("");
@@ -124,7 +118,7 @@ database.ref().on("child_added", function(childSnapshot) {
 
   // Store incoming data from Firebase into vars
   var fullName = csv.fullName;
-  var officePhone = csv.officePhone;
+  var phone = csv.phone;
   var cellPhone = csv.cellPhone;
   var jobTitle = csv.jobTitle;
   var company = csv.company;
@@ -149,13 +143,9 @@ database.ref().on("child_added", function(childSnapshot) {
       '<tr> <td colspan="2" class="full-name" style="font-weight: bold; color: rgb(0, 0, 0); font-size: 24px; font-family: Arial, Helvetica, sans-serif;">' + 
       fullName +
       "</td> </tr>" +
-      // Concatenate office phone <tr> tag
+      // Concatenate phone <tr> tag
       '<tr><td colspan="2" class="phone" style="padding-bottom: 10px; vertical-align: top; color: #333333; font-size: 14px; font-family: Arial, Helvetica, sans-serif;">' + 'Phone: ' +
-      officePhone +
-      "</td> </tr>" +
-      // Concatenate cell phone <tr> tag
-      '<tr><td colspan="2" class="phone" style="padding-bottom: 10px; vertical-align: top; color: #333333; font-size: 14px; font-family: Arial, Helvetica, sans-serif;">' +  'Cell: ' +
-      cellPhone +
+      phone +
       "</td> </tr>" +
       // Concatenate job title <tr> tag
       '<tr> <td colspan="2" class="title" style="padding-bottom: 10px; color: #333333; font-size: 14px; font-family: Arial, Helvetica, sans-serif;">' +
