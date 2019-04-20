@@ -69,3 +69,8 @@ h1, h2, h3 {
   font-family: futura;
   color: white;
 }
+
+.template {
+  width: 200px;
+  border-radius: 15px;
+}
