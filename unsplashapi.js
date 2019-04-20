@@ -13,7 +13,7 @@ $(document).ready(function() {
     }).then(function(response) {
       console.log(response);
       
-      
+      // generate random num to cycle thru the pulled images
       var randomNum = Math.floor(Math.random() * 11);
       console.log(randomNum);
 
