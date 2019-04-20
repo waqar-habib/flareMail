@@ -6,14 +6,12 @@ $(document).ready(function() {
 
   console.log(queryURL);
 
-  // Make an AJAX call using queryURL
   $.ajax({
     url: queryURL,
     methond: "GET"
   }).then(function(response) {
     console.log(response);
 
-    // Store the response in var results
     var results = response.data;
     console.log(results);
   });

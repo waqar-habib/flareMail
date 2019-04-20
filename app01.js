@@ -37,7 +37,7 @@ $("#generateCodeBtn").on("click", function() {
   fullName = $("#fullName")
     .val()
     .trim();
-  officePhone = $("#phone")
+  phone = $("#phone")
     .val()
     .trim();
   jobTitle = $("#jobTitle")
@@ -67,9 +67,6 @@ $("#generateCodeBtn").on("click", function() {
   zip = $("#zip")
     .val()
     .trim();
-
-  // Clg check CLEAR
-  //console.log(fullName, cellNumber, email, jobTitle, department, company, website, officePhone, officeFax, addressOne, addressTwo, city, state, zip);
 
   // Create an object to store all user input
   var userInfo = {
@@ -119,7 +116,6 @@ database.ref().on("child_added", function(childSnapshot) {
   // Store incoming data from Firebase into vars
   var fullName = csv.fullName;
   var phone = csv.phone;
-  var cellPhone = csv.cellPhone;
   var jobTitle = csv.jobTitle;
   var company = csv.company;
   var website = csv.website;
@@ -131,63 +127,38 @@ database.ref().on("child_added", function(childSnapshot) {
   var zip = csv.zip;
 
   // Clg check - CLEAR
-  //console.log(fullName);
+  //console.log(email);
 
   // Print data into div
 
   // From <body> to <tbody> where the full name code starts
   $("#generatedCode").empty();
   $("#generatedCode").append(
-    '<div class="presentational-container" style="padding: 20px; background-color: #fff" ;> <table role="presentation" style="background: none; margin: 0; padding: 10px 10px 0; border-width: 3px 0 0 0; border-style: solid; border-color: rgb(78, 78, 78);"> <tbody> <!-- Image --> <tr class="outer-row" style="padding: 0 12px 0 0;"> <td class="image-cell" style="padding: 0 12px 0 0; text-decoration: none;"> <img src="./images/waqar.png" name="preview-image-url" alt="Signature Image" style="vertical-align: middle;width:120px; border-radius: 100%;"/> </td> <td class="description-cell" style="padding: 0 0 0 12px;"> <table role="presentation" style="background: none; border: 0px; margin: 0; padding: 0;"> <tbody>' +
+    '<body><div id="sig-01" class="presentational-container" style="padding: 20px; background-color: #fff" ;> <table role="presentation" style="background: none; margin: 0; padding: 10px 10px 0; border-width: 3px 0 0 0; border-style: solid; border-color: rgb(78, 78, 78);"> <meta http-equiv="Content-Type" content="text/html; charset=utf-8"> <meta name="format-detection" content="telephone=no"> <tbody> <tr class="outer-row" style="padding: 0 12px 0 0;"> <td class="description-cell" style="padding: 0 0 0 12px;"> <table role="presentation" style="background: none; border: 0px; margin: 0; padding: 0;"> <tbody>' +
       // Concatenate full name <tr> tag
-      '<tr> <td colspan="2" class="full-name" style="font-weight: bold; color: rgb(0, 0, 0); font-size: 24px; font-family: Arial, Helvetica, sans-serif;">' + 
+      ' <tr> <td colspan="2" id="fullName" style="font-weight: bold; color: rgb(0, 0, 0); font-size: 24px; font-family: Arial, Helvetica, sans-serif;">' + 
       fullName +
       "</td> </tr>" +
       // Concatenate phone <tr> tag
-      '<tr><td colspan="2" class="phone" style="padding-bottom: 10px; vertical-align: top; color: #333333; font-size: 14px; font-family: Arial, Helvetica, sans-serif;">' + 'Phone: ' +
-      phone +
+      ' <tr> <td colspan="2" id="cellPhone" style="padding-bottom: 10px; vertical-align: top; color: #333333; font-size: 14px; font-family: Arial, Helvetica, sans-serif;">' + 'Phone: ' + phone +
       "</td> </tr>" +
       // Concatenate job title <tr> tag
-      '<tr> <td colspan="2" class="title" style="padding-bottom: 10px; color: #333333; font-size: 14px; font-family: Arial, Helvetica, sans-serif;">' +
-      jobTitle +
-      "</td> </tr>" +
+      ' <tr> <td colspan="2" id="jobTitle" style="padding-bottom: 10px; color: #333333; font-size: 14px; font-family: Arial, Helvetica, sans-serif;">' +
+      jobTitle + "</td> </tr>" +
       // Concatenate company <tr> tag
-      '<tr> <td colspan="2" class="company" style="padding-bottom: 10px; vertical-align: top; color: #333333; font-size: 14px; font-family: Arial, Helvetica, sans-serif;">' +
-      company +
-      "</td></tr>" +
+      '<tr> <td colspan="2" id="company" style="padding-bottom: 10px; vertical-align: top; color: #333333; font-size: 14px; font-family: Arial, Helvetica, sans-serif;">' +
+      company + "</td></tr>" +
       // Concatenate website <tr> tag
-      '<tr> <td valign="top" class="website" style="padding-bottom: 10px; vertical-align: top; color: #333333; font-size: 14px; font-family: Arial, Helvetica, sans-serif;"> <a href="" style="color: rgb(5, 113, 255); text-decoration: none; font-weight: normal; font-size: 14px;">' + 'Website: ' +
-      website +
-      "</a> </td> </tr>" +
+      ' <tr> <td valign="top" id="website" style="padding-bottom: 10px;"> <a href="" style= "vertical-align: top; color: #333333; font-size: 14px; font-family: Arial, Helvetica, sans-serif;text-decoration: none">' + 'Website: ' +
+      website + "</a> </td> </tr>" +
       // Concatenate email <tr> tag
-      '<tr> <td colspan="2" class="email" style="padding-bottom: 10px; vertical-align: top; color: #333333; font-size: 14px; font-family: Arial, Helvetica, sans-serif;"> <a href="">' + 'Email: ' + email + "</a> </td> </tr>" +
-      
-      /* Uncomment out the code from ln 177-196, once the template has been modified to include the address, State, city and zip fields.
-      // Concatenate address one <tr> tag
-      "" +
-      addressOne +
-      "</td></tr>" +
-      // Concatenate address two <tr> tag
-      "" +
-      addressTwo +
-      "</td></tr>" +
-      // Concatenate city <tr> tag
-      "" +
-      city +
-      "</td></tr>" +
-      // Concatenate state <tr> tag
-      "" +
-      state +
-      "</td></tr>" +
-      // Concatenate zip <tr> tag
-      "" +
-      zip +
-      "</td></tr>" +
-      */
+      '<tr> <td colspan="2" id="company" style="padding-bottom: 10px; vertical-align: top; color: #333333; font-size: 14px; font-family: Arial, Helvetica, sans-serif;">' + 'Email: ' + email + "</td></tr>" +
+      // Concatenate address, city, state, zip
+      '<tr> <td colspan="2" id="addressTwo" style="padding-bottom: 10px; vertical-align: top; color: #333333; font-size: 14px; font-family: Arial, Helvetica, sans-serif;"> <p><span id="addressOne"></span>' + addressOne + '</span><span id="addressTwo"> </span>' + addressTwo + '</span></p> <p><span id="city">' + city + '</span> | <span id="state">' + state + '</span> | <span id="zip">' + zip + '</span></p> </td> </tr>' +
+      // Closing tags
+      '</tbody> </table> </td> </tr> </tbody> </table> </div></body>'
 
-      // 4.17.16 - Modify the code below once the form fields for social media are added so app.js concatenates the user input with the code below. Also, update the social media icons links.
-
-      // Print rest of html code that doesn't have user input
-      '<!-- Social Media --> <tr> <td colspan="2" class="social-icons" style="padding-top: 5px;"> <ul style="list-style: none; padding: 0; margin: 0; height: 25px;"> <li style="display: inline-block;"> <a href="" style="text-decoration: none;"><img src="https://image.flaticon.com/icons/svg/174/174848.svg" alt="Let\'s be friends on Facebook." style="width: 25px; height: 25px;" /> </a> </li> <li style="display: inline-block;"> <a href="" style="text-decoration: none;"> <img src="https://image.flaticon.com/icons/svg/174/174876.svg" alt="Follow me on Twitter!" style="width: 25px; height: 25px;" /> </a> </li> <li style="display: inline-block;"> <a href="" style="text-decoration: none;"> <img src="https://image.flaticon.com/icons/svg/174/174855.svg" alt="Follow me on Instagram!" style="width: 25px; height: 25px;" /> </a> </li> <li style="display: inline-block;"> <a href="" style="text-decoration: none;"> <img src="https://image.flaticon.com/icons/svg/174/174857.svg" alt="Connected with me on LinkedIn!" style="width: 25px; height: 25px;" /> </a> </li> </ul> </td> </tr> </tbody> </table> </td> </tr> </tbody> </table> </div></body>'
   );
 });
+
+
