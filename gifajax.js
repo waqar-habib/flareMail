@@ -15,9 +15,14 @@ $(document).ready(function() {
 
     var results = response.data;
     console.log(results);
-    var gifDiv = $("<div>");
-    var gifImage = $("<img>");
-
-    $("#gif").prepend(gifImage);
+    for (let index = 0; index < results.length; index++) {
+      var gifDiv = $("<div>");
+      var gifImage = $("<img>").addClass("imgBorder");
+      gifImage.attr("src", results[index].images.fixed_height.url);
+      gifImage.attr("data-animate", results[index].images.fixed_height.url);
+      gifImage.attr("data-state", "animate");
+      gifDiv.prepend(gifImage);
+      $("#gif").prepend(gifDiv);
+    }
   });
 });
