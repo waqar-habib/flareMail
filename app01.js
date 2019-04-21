@@ -1,5 +1,4 @@
 // Initialize Firebase
-
 var config = {
   apiKey: "AIzaSyBtDOAmnjJ0ZnBAAVHSRNyFAjTdxd2LzyU",
   authDomain: "fir-test-819e4.firebaseapp.com",
@@ -27,46 +26,24 @@ var state = "";
 var zip = "";
 
 // On click function for generatedCode.html
-$("#generateCodeBtn").on("click", function() {
+$("#generateCodeBtn").on("click", function () {
   event.preventDefault();
 
   // Navigate to generatedCode.html
   location.href = "./generatedCode01.html";
 
   // Grab values from text boxes
-  fullName = $("#fullName")
-    .val()
-    .trim();
-  phone = $("#phone")
-    .val()
-    .trim();
-  jobTitle = $("#jobTitle")
-    .val()
-    .trim();
-  company = $("#companyName")
-    .val()
-    .trim();
-  website = $("#websiteURL")
-    .val()
-    .trim();
-  email = $("#emailAddress")
-    .val()
-    .trim();
-  addressOne = $("#address")
-    .val()
-    .trim();
-  addressTwo = $("#address2")
-    .val()
-    .trim();
-  city = $("#city")
-    .val()
-    .trim();
-  state = $("#state")
-    .val()
-    .trim();
-  zip = $("#zip")
-    .val()
-    .trim();
+  fullName = $("#fullName").val().trim();
+  phone = $("#phone").val().trim();
+  jobTitle = $("#jobTitle").val().trim();
+  company = $("#companyName").val().trim();
+  website = $("#websiteURL").val().trim();
+  email = $("#emailAddress").val().trim();
+  addressOne = $("#address").val().trim();
+  addressTwo = $("#address2").val().trim();
+  city = $("#city").val().trim();
+  state = $("#state").val().trim();
+  zip = $("#zip").val().trim();
 
   // Create an object to store all user input
   var userInfo = {
@@ -106,7 +83,7 @@ $("#generateCodeBtn").on("click", function() {
 }); // end generateCodeBtn function
 
 // Pull data from Firebase
-database.ref().on("child_added", function(childSnapshot) {
+database.ref().on("child_added", function (childSnapshot) {
   // Create a var to store the childSnapshot command - csv = child snapshot value
   var csv = childSnapshot.val();
 
@@ -134,31 +111,31 @@ database.ref().on("child_added", function(childSnapshot) {
   // From <body> to <tbody> where the full name code starts
   $("#generatedCode").empty();
   $("#generatedCode").append(
-    '<body><div id="sig-01" class="presentational-container" style="padding: 20px; background-color: #fff" ;> <table role="presentation" style="background: none; margin: 0; padding: 10px 10px 0; border-width: 3px 0 0 0; border-style: solid; border-color: rgb(78, 78, 78);"> <meta http-equiv="Content-Type" content="text/html; charset=utf-8"> <meta name="format-detection" content="telephone=no"> <tbody> <tr class="outer-row" style="padding: 0 12px 0 0;"> <td class="description-cell" style="padding: 0 0 0 12px;"> <table role="presentation" style="background: none; border: 0px; margin: 0; padding: 0;"> <tbody>' +
-      // Concatenate full name <tr> tag
-      ' <tr> <td colspan="2" id="fullName" style="font-weight: bold; color: rgb(0, 0, 0); font-size: 24px; font-family: Arial, Helvetica, sans-serif;">' + 
-      fullName +
-      "</td> </tr>" +
-      // Concatenate phone <tr> tag
-      ' <tr> <td colspan="2" id="cellPhone" style="padding-bottom: 10px; vertical-align: top; color: #333333; font-size: 14px; font-family: Arial, Helvetica, sans-serif;">' + 'Phone: ' + phone +
-      "</td> </tr>" +
-      // Concatenate job title <tr> tag
-      ' <tr> <td colspan="2" id="jobTitle" style="padding-bottom: 10px; color: #333333; font-size: 14px; font-family: Arial, Helvetica, sans-serif;">' +
-      jobTitle + "</td> </tr>" +
-      // Concatenate company <tr> tag
-      '<tr> <td colspan="2" id="company" style="padding-bottom: 10px; vertical-align: top; color: #333333; font-size: 14px; font-family: Arial, Helvetica, sans-serif;">' +
-      company + "</td></tr>" +
-      // Concatenate website <tr> tag
-      ' <tr> <td valign="top" id="website" style="padding-bottom: 10px;"> <a href="" style= "vertical-align: top; color: #333333; font-size: 14px; font-family: Arial, Helvetica, sans-serif;text-decoration: none">' + 'Website: ' +
-      website + "</a> </td> </tr>" +
-      // Concatenate email <tr> tag
-      '<tr> <td colspan="2" id="company" style="padding-bottom: 10px; vertical-align: top; color: #333333; font-size: 14px; font-family: Arial, Helvetica, sans-serif;">' + 'Email: ' + email + "</td></tr>" +
-      // Concatenate address, city, state, zip
-      '<tr> <td colspan="2" id="addressTwo" style="padding-bottom: 10px; vertical-align: top; color: #333333; font-size: 14px; font-family: Arial, Helvetica, sans-serif;"> <p><span id="addressOne"></span>' + addressOne + '</span><span id="addressTwo"> </span>' + addressTwo + '</span></p> <p><span id="city">' + city + '</span> | <span id="state">' + state + '</span> | <span id="zip">' + zip + '</span></p> </td> </tr>' +
-      // Closing tags
-      '</tbody> </table> </td> </tr> </tbody> </table> </div></body>'
+    '<div id="sig-01" class="presentational-container" style="padding: 20px; background-color: #fff" ;><table role="presentation" style = "background: none; margin: 0; padding: 0 0 10px 0; border-width: 2px 0 0 0; border-style: solid; border-color: #333333;"><meta http - equiv "Content-Type" content = "text/html; charset=utf-8"><meta name = "format-detection"content = "telephone=no"> <tbody><tr class="outer-row" style="padding: 0 0 10px 0;"><td class="description-cell" style="padding: 0 0 0 0px;"><table role="presentation" style="background: none; border: 0px; margin: 0; padding: 0;"><tbody>' +
+    // Concatenate full name
+    '<tr><td colspan="2" id="fullName" style="font-weight: bold color: rgb(5, 113, 255); font-size: 24px; font-family: Arial, Helvetica, sans-serif;">' +
+    fullName +
+    "</td> </tr>" +
+    // Concatenate phone
+    '<tr><td colspan="2" id="cellPhone" style="vertical-align: top; color: #333333; font-size: 14px; font-family: Arial, Helvetica, sans-serif;">' + 'Phone: ' + phone +
+    "</td> </tr>" +
+    // Concatenate job title
+    '<tr><td colspan="2" id="jobTitle" style="color: #333333; font-size: 14px; font-family: Arial, Helvetica, sans-serif"> Web Developer</td>' +
+    jobTitle + "</td> </tr>" +
+    // Concatenate company
+    '<tr><td colspan="2" id="company"style="vertical-align: top; color: #333333; font-size: 14px; font-family: Arial Helvetica, sans-serif;">' +
+    company + "</td></tr>" +
+    // Concatenate website
+    ' <tr> <td valign="top" id="website" style="padding-bottom: 10px;"> <a href="" style= "vertical-align: top; color: #333333; font-size: 14px; font-family: Arial, Helvetica, sans-serif;text-decoration: none">' + 'Website: ' +
+    website + "</a></td></tr>" +
+    // Concatenate email
+    '<td colspan="2" id="email"><a href=""style="vertical-align: top; color: #333333; font-size: 14px; font-family: Arial, Helvetica, sans-serif;text-decoration: none">' + 'Email: ' + email + "</td></tr>" +
+    // Concatenate address one & two, city, state, zip
+    '<tr><td colspan="2" style="vertical-align: top; color: #333333; font-size: 14px; font-family: Arial, Helvetica, sans-serif;"><p><span></span>Address 1</span><span id="addressOne"></span>' + addressOne + '</span><span id="addressTwo"></span>' + addressTwo + '</span></p></td></tr>' +
 
+    // Concatenate city, state, zip
+    '<tr><td colspan="2" style="vertical-align: top; color: #333333; font-size: 14px; font-family: Arial, Helvetica sans-serif;"><p><span id="city">' + city + '</span> <span id="state">' + state + '</span> <spanid="zip">' + zip + '</span></p></td></tr>' +
+    // Closing tags
+    '</td></tr></tbody></table></td></tr></tbody></table></div>'
   );
 });
-
-
