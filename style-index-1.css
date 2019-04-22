@@ -71,8 +71,9 @@ h1, h2, h3 {
 }
 
 .template {
-  width: 200px;
+  width: 250px;
   border-radius: 15px;
+  border: 5px solid black;
 }
 
 .imgBorder {
