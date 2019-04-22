@@ -115,23 +115,19 @@ database.ref().on("child_added", function (childSnapshot) {
   $("#generatedCode").append(
     '<div id="sig-03" style="min-height: 50px; line-height: 17px; margin: 6px 0; padding: 8px; font-family: "Lucida Grande", Verdana, Arial, Sans-Serif; font-size: 11px; color: #606f78; min-width: 530px;"><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta name="format-detection" content="telephone=no"> <table role="presentation" style="background: none; border: 0px; margin: 0; padding: 0;"><tbody>' +
     // Concatenate full name <tr> tag
-    '<tr><td colspan="2" class="full-name" id="full-name-03" style="font-weight: bold; color: #606f78; font-size: 20px; font-family: Arial, Helvetica, sans-serif; line-height: 2rem;padding-bottom: 10px;  border-width: 0 0 1px 0; border-style: solid; border-color: rgb(255, 0, 0)">' + fullName + '</td> </tr>' +
+    '<tr><td colspan="2" style="font-weight: bold; color: #606f78; font-size: 20px; font-family: Arial, Helvetica, sans-serif; line-height: 2rem;padding-bottom: 5px;  border-width: 0 0 1px 0; border-style: solid; border-color: rgb(255, 0, 0)">' + fullName + '</td></tr>' +
     // Concatenate job title <tr> tag
-    ' <tr> <td colspan="2" id="jobTitle" style="padding-bottom: 10px; color: #333333; font-size: 14px; font-family: Arial, Helvetica, sans-serif;">' +
+    ' <tr> <td colspan="2" style="padding-top: 10px; color: #606f78; font-size: 12px; font-family: Arial, Helvetica, sans-serif; line-height: .2rem; padding-top: 10px;">' +
     jobTitle + '</td></tr>' +
     // Concatenate phone <tr> tag
-    '<tr><td colspan="2" class="phone" id="phone-03" style="padding-top: 10px; vertical-align: top; color: #606f78; font-size: 12px; font-family: Arial, Helvetica, sans-serif; line-height: .2rem;">' + 'Phone: ' + phone + '</td></tr>' +
+    '<tr><td colspan="2" style="padding-top: 10px; vertical-align: top; color: #606f78; font-size: 12px; font-family: Arial, Helvetica, sans-serif; line-height: .2rem;">' + 'Phone: ' + phone + '</td></tr>' +
     // Concatenate company <tr> tag
-    '<tr><td colspan="2" class="title" id="title-03" style="padding-bottom: 10px; color: #606f78; font-size: 12px; font-family: Arial, Helvetica, sans-serif; line-height: .2rem; padding-top: 10px;">' + company + "</td></tr>" +
+    '<tr><td colspan="2" style="padding-top: 10px; vertical-align: top; color: #606f78; font-size: 12px; font-family: Arial, Helvetica, sans-serif; line-height: .2rem;">' + company + "</td></tr>" +
     // Concatenate email <tr> tag
-    '<tr><td colspan="2" style="padding-bottom: 10px;" class="email" id="email-03"><a href=""style="vertical-align: top; color: #606f78; font-size: 12px; font-family: Arial, Helvetica, sans-serif; line-height: .2rem; text-decoration: none;">' + 'Email: ' + email + '</a></td></tr>' +
+    '<tr><td colspan="2" style="padding-top: 10px;"><a href="" style="vertical-align: top; color: #606f78; font-size: 12px; font-family: Arial, Helvetica, sans-serif; line-height: .2rem; text-decoration: none;">' + 'Email: ' + email + '</a></td></tr>' +
     // Concatenate website <tr> tag
-    '<tr><td colspan="2" style="padding-bottom: 10px;" class="website" id="website-01"><a href="" style="vertical-align: top; color: #606f78; font-size: 12px; font-family: Arial, Helvetica, sans-serif; line-height: .2rem; text-decoration: none;">' + 'Website: ' +
-    website + '</a></td></tr>' +
-    // Concatenate address, city, state, zip
-    // '<tr> <td colspan="2" id="addressTwo" style="padding-bottom: 10px; vertical-align: top; color: #333333; font-size: 14px; font-family: Arial, Helvetica, sans-serif;"> <p><span id="addressOne"></span>' + addressOne + '</span><span id="addressTwo"> </span>' + addressTwo + '</span></p> <p><span id="city">' + city + '</span> | <span id="state">' + state + '</span> | <span id="zip">' + zip + '</span></p> </td> </tr>' +
+    '<tr><td colspan="2" style="padding-top: 10px;"><a href="" style="vertical-align: top; color: #606f78; font-size: 12px; font-family: Arial, Helvetica, sans-serif; line-height: .2rem; text-decoration: none;">' + 'Website: ' + website + '</a></td></tr>' +
     // Closing tags
     '</tbody></table></td></tr></tbody></table></div></body>'
-
   );
 });
