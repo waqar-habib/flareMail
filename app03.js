@@ -115,19 +115,21 @@ database.ref().on("child_added", function (childSnapshot) {
   $("#generatedCode").append(
     '<div id="sig-03" style="min-height: 50px; line-height: 17px; margin: 6px 0; padding: 8px; font-family: "Lucida Grande", Verdana, Arial, Sans-Serif; font-size: 11px; color: #606f78; min-width: 530px;"><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta name="format-detection" content="telephone=no"> <table role="presentation" style="background: none; border: 0px; margin: 0; padding: 0;"><tbody>' +
     // Concatenate full name <tr> tag
-    '<tr><td colspan="2" style="font-weight: bold; color: #606f78; font-size: 20px; font-family: Arial, Helvetica, sans-serif; line-height: 2rem;padding-bottom: 5px;  border-width: 0 0 1px 0; border-style: solid; border-color: rgb(255, 0, 0)">' + fullName + '</td></tr>' +
-    // Concatenate job title <tr> tag
-    ' <tr> <td colspan="2" style="padding-top: 10px; color: #606f78; font-size: 12px; font-family: Arial, Helvetica, sans-serif; line-height: .2rem; padding-top: 10px;">' +
-    jobTitle + '</td></tr>' +
+    '<tr><td colspan="2" style="font-weight: bold; color: #606f78; font-size: 25px; font-family: Arial, Helvetica, sans-serif; line-height: 2rem; border-width: 0 0 1px 0; border-style: solid; border-color: rgb(255, 0, 0)">' + fullName + '</td></tr>' +
+    // Concatenate job title <tr> and company <tr> tag
+    ' <tr> <td colspan="2" style="padding-top: 10px; padding-bottom: 15px; color: #606f78; font-size: 15px; font-family: Arial, Helvetica, sans-serif; line-height: .2rem; padding-top: 10px;">' +
+    jobTitle + ' | ' + company +  '</td></tr>' +
     // Concatenate phone <tr> tag
-    '<tr><td colspan="2" style="padding-top: 10px; vertical-align: top; color: #606f78; font-size: 12px; font-family: Arial, Helvetica, sans-serif; line-height: .2rem;">' + 'Phone: ' + phone + '</td></tr>' +
-    // Concatenate company <tr> tag
-    '<tr><td colspan="2" style="padding-top: 10px; vertical-align: top; color: #606f78; font-size: 12px; font-family: Arial, Helvetica, sans-serif; line-height: .2rem;">' + company + "</td></tr>" +
+    '<tr><td colspan="2" style="padding-top: 10px; vertical-align: top; color: #606f78; font-size: 12px; font-family: Arial, Helvetica, sans-serif; line-height: .5rem;">' + 'Phone: ' + phone + '</td></tr>' +
+
     // Concatenate email <tr> tag
-    '<tr><td colspan="2" style="padding-top: 10px;"><a href="" style="vertical-align: top; color: #606f78; font-size: 12px; font-family: Arial, Helvetica, sans-serif; line-height: .2rem; text-decoration: none;">' + 'Email: ' + email + '</a></td></tr>' +
+    '<tr><td colspan="2" style="padding-top: 10px;"><a href="" style="vertical-align: top; color: #606f78; font-size: 12px; font-family: Arial, Helvetica, sans-serif; line-height: .5rem; text-decoration: none;">' + 'Email: ' + email + '</a></td></tr>' +
     // Concatenate website <tr> tag
-    '<tr><td colspan="2" style="padding-top: 10px;"><a href="" style="vertical-align: top; color: #606f78; font-size: 12px; font-family: Arial, Helvetica, sans-serif; line-height: .2rem; text-decoration: none;">' + 'Website: ' + website + '</a></td></tr>' +
+    '<tr><td colspan="2"><a href="" style="vertical-align: top; color: #606f78; font-size: 12px; font-family: Arial, Helvetica, sans-serif; line-height: .5rem; text-decoration: none;">' + 'Website: ' + website + '</a></td></tr>' +
+    // Concatenate address one & two, city, state, zip
+    '<tr><td colspan="2" style="padding-top: 4px; vertical-align: top; color: #606f78; font-size: 12px; font-family: Arial, Helvetica, sans-serif; line-height: 1rem;">' + 'Address: ' + addressOne + ' | ' + addressTwo + '<br>' + city + ', ' + state + ' ' + zip + "</td></tr>" +
     // Closing tags
     '</tbody></table></td></tr></tbody></table></div></body>'
   );
 });
+
