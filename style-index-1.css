@@ -78,3 +78,7 @@ h1, h2, h3 {
 .imgBorder {
   border-radius: 15px;
 }
+
+a {
+  color: #ffffff;
+}
