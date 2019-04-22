@@ -114,17 +114,16 @@ database.ref().on("child_added", function (childSnapshot) {
   $("#generatedCode").append(
     '<div id="sig-01" class="presentational-container" style="padding: 20px; background-color: #fff";><table role="presentation" style = "background: none; margin: 0; padding: 0 0 10px 0; border-width: 2px 0 0 0; border-style: solid; border-color: #333333;"><meta http - equiv "Content-Type" content = "text/html; charset=utf-8"><meta name = "format-detection"content = "telephone=no"> <tbody><tr class="outer-row" style="padding: 0 0 10px 0;"><td class="description-cell" style="padding: 0 0 0 0px;"><table role="presentation" style="background: none; border: 0px; margin: 0; padding: 0;"><tbody>' +
     // Concatenate full name
-    '<tr><td colspan="2" style="font-weight: bold; color: rgb(5, 113, 255); font-size: 24px; font-family: Arial, Helvetica, sans-serif;">' + fullName + '</td></tr>' +
+    '<tr><td colspan="2" style="font-weight: bold; color: rgb(5, 113, 255); font-style: italic; font-size: 24px; font-family: Arial, Helvetica, sans-serif;">' + fullName + '</td></tr>' +
     // Concatenate job title
-    '<tr><td colspan="2" style="color: #333333; font-size: 14px; font-family: Arial, Helvetica, sans-serif;">' + jobTitle + '</td> </tr>' +
+    '<tr><td colspan="2" style="color: #333333; font-size: 17px; font-weight: bold; font-family: Arial, Helvetica, sans-serif;">' + jobTitle + '</td> </tr>' +
+    // Concatenate company
+    '<tr><td colspan="2" style="vertical-align: top; color: #333333; font-size: 14px; font-weight: bold; font-family: Arial, Helvetica, sans-serif;">' + company + '</td></tr>' +
     // Concatenate phone
     '<tr><td colspan="2" style="vertical-align: top; color: #333333; font-size: 14px; font-family: Arial, Helvetica, sans-serif;">' + 'Phone: ' + phone + '</td></tr>' +
-    // Concatenate company
-    '<tr><td colspan="2" style="vertical-align: top; color: #333333; font-size: 14px; font-family: Arial, Helvetica, sans-serif;">' + company + '</td></tr>' +
+
     // Concatenate address one & two, city, state, zip
-    '<tr><td colspan="2" style="vertical-align: top; color: #333333; font-size: 14px; font-family: Arial, Helvetica, sans-serif;"><p><span>' + addressOne + '</span><span>' + addressTwo + '</span></p></td></tr>' +
-    // Concatenate city, state, zip
-    '<td colspan="2" style="vertical-align: top; color: #333333; font-size: 14px; font-family: Arial, Helvetica, sans-serif;"><p><span>' + city + '</span> <span>' + state + '</span><span>' + zip + '</span></p></td></tr>' +
+    '<tr><td colspan="2" style="vertical-align: top; color: #333333; font-size: 14px; font-family: Arial, Helvetica, sans-serif;">' + addressOne + ' | ' + addressTwo + '<br>'+ city + ', ' + state + ' ' + zip +'</td></tr>' +
     // Concatenate website
     '<tr><td colspan="2"><a href="" style="vertical-align: top; color: #333333; font-size: 14px; font-family: Arial, Helvetica, sans-serif;text-decoration: none">' + 'Website: ' + website + '</a></td></tr>' +
     // Concatenate email
