@@ -115,19 +115,19 @@ database.ref().on("child_added", function (childSnapshot) {
   $("#generatedCode").append(
     '<div id="sig-02" style="min-height: 50px; line-height: 17px; margin: 6px 0; padding: 8px; font-family: "Lucida Grande", Verdana, Arial, Sans-Serif; font-size: 11px; color: #606f78; min-width: 530px; border: solid; border-width: 1px 0 1px 0; border-color: rgb(78, 78, 78);"><meta http-equiv="Content-Type" content="text/html; charset=utf-8"> <meta name="format-detection" content="telephone=no"><table role="presentation" style="background: none; border: 0px; margin: 0; padding: 0;"> <tbody>' +
     // Concatenate full name <tr> tag
-    '<tr><td colspan="2" style="font-weight: bold; color: rgb(5, 113, 255); font-size: 24px; font-family: Arial, Helvetica, sans-serif; line-height: 2rem;">' + fullName + '</td></tr>' +
+    '<tr><td colspan="2" style="font-weight: bolder; color: #05108c; font-size: 24px; font-family: cursive; line-height: 2rem;">' + fullName + '</td></tr>' +
+    // Concatenate job title <tr> tag + company <tr> tag
+    '<tr><td colspan="2" style="padding-bottom: 10px; vertical-align: top; color: #0264ce; font-size: 16px; font-style: italic; font-weight: bold; font-family: Arial, Helvetica, sans-serif; line-height: 1.2rem;">' + jobTitle + ' | ' + company + "</td> </tr>" +
     // Concatenate phone <tr> tag
-    '<tr><td colspan="2" style="padding-bottom: 10px; vertical-align: top; color: #333333; font-size: 14px; font-family: Arial, Helvetica, sans-serif; line-height: .4rem;">' + 'Phone: ' + phone + '</td></tr>' +
-    // Concatenate job title <tr> tag
-    '<tr><td colspan="2" style="padding-bottom: 10px; vertical-align: top; color: #333333; font-size: 14px; font-family: Arial, Helvetica, sans-serif; line-height: .4rem;">' + jobTitle + "</td> </tr>" +
-    // Concatenate company <tr> tag
-    '<tr><td colspan="2" style="padding-bottom: 10px; vertical-align: top; color: #333333; font-size: 14px; font-family: Arial, Helvetica, sans-serif; line-height: .4rem;">' + company + "</td></tr>" +
+    '<tr><td colspan="2" style="padding-bottom: 10px; vertical-align: top; color: #333333; font-size: 14px; font-weight: bold; font-family: Arial, Helvetica, sans-serif; line-height: .6rem;">' + 'Cell: ' + phone + '</td></tr>' +
+
+
+    // Concatenate address one & two, city, state, zip
+    '<tr><td colspan="2" style="vertical-align: top; color: #333333; font-style: italic; line-height: 1.5rem; font-size: 14px; font-family: Arial, Helvetica, sans-serif;">' + 'Address:' + addressOne + ' | ' + addressTwo + '<br>' + city + ', ' + state + ' ' + zip + '</td></tr>' +
     // Concatenate website <tr> tag
-    '<tr><td valign="top" style="padding-bottom: 10px; vertical-align: top; color: #333333; font-size: 14px; font-family: Arial, Helvetica, sans-serif; line-height: .4rem;"><a href="" style="color: #333333; text-decoration: none; font-weight: normal; font-size: 14px; text-decoration: none;">' + 'Website: ' + website + "</a></td></tr>" +
+    '<tr><td valign="top" style="padding-bottom: 10px; vertical-align: top; color: #333333; font-size: 14px; font-family: Arial, Helvetica, sans-serif; line-height: .7rem;"><a href="" style="color: #333333; text-decoration: none; font-weight: normal; font-size: 14px; text-decoration: none;">' + 'Website: ' + website + "</a></td></tr>" +
     // Concatenate email <tr> tag
-    '<tr><td colspan="2" style="padding-bottom: 10px; vertical-align: top; color: #333333; font-size: 14px; font-family: Arial, Helvetica, sans-serif; line-height: .4rem;"><a href="" style="color: #333333; text-decoration: none; font-weight: normal; font-size: 14px; text-decoration: none;">' + 'Email: ' + email + "</a></td></tr>" +
-    // Concatenate address, city, state, zip
-    // '<tr> <td colspan="2" id="addressTwo" style="padding-bottom: 10px; vertical-align: top; color: #333333; font-size: 14px; font-family: Arial, Helvetica, sans-serif;"> <p><span id="addressOne"></span>' + addressOne + '</span><span id="addressTwo"> </span>' + addressTwo + '</span></p> <p><span id="city">' + city + '</span> | <span id="state">' + state + '</span> | <span id="zip">' + zip + '</span></p> </td> </tr>' +
+    '<tr><td colspan="2" style="padding-bottom: 10px; vertical-align: top; color: #333333; font-size: 14px; font-family: Arial, Helvetica, sans-serif; line-height: .7rem;"><a href="" style="color: #333333; text-decoration: none; font-weight: normal; font-size: 14px; text-decoration: none;">' + 'Email: ' + email + "</a></td></tr>" +
     // Closing tags
     '</tbody> </table> </td> </tr> </tbody> </table> </div></body>'
 
