@@ -1,6 +1,6 @@
-# Project: FlareMail (Tentative)
+# Project: FlareMail
 
-> Live Site link: https://waqar-habib.github.io/bootcamp-project-one/
+> Live Site link: https://waqar-habib.github.io/flareMail/
 
 ## Project Summary
 
@@ -23,22 +23,22 @@
 
 ## Animated Gifs/Pictures of App
 
-- Coming Soon - 04/20/2019
+- Coming Soon 
 
 ## Tech Stack
 
 - Languages: HTML5/CSS3, JavaScript
 - Libraries: jQuery, Bootstrap, Google Fonts
-- APIs: GIPHY, ZipCode lookup
+- APIs: Unsplash, GIPHY
 
 ## APIs
 
+- Unsplash API: https://unsplash.com/developers
 - GIPHY API: https://developers.giphy.com/
-- ZipCode Lookup:
 
 ## MVP
 
-- Generate basic html code that can be copied and pasted into email server
+- Generate a signature (not just HTML code) that can be copied and pasted into email server
 
 ## Stretch Goals
 
@@ -48,7 +48,3 @@
 ## Future Development
 
 - TBD
-
-## Credits/Resources
-
-- Credits Coming Soon
